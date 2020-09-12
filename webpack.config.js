@@ -45,7 +45,7 @@ module.exports = {
         use: {
           loader: "file-loader", // loader for all files
           options: {
-            name: "[name].[ext]", // keep name
+            name: "img/[name].[ext]", // keep name
           },
         },
       },
@@ -71,7 +71,7 @@ module.exports = {
     new CleanWebpackPlugin(), // clean dist
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      //favicon: "./src/favicon.ico", // uncomment for favicon
+      favicon: "./src/favicon.svg",
       filename: "./index.html",
     }), // html support
   ],
