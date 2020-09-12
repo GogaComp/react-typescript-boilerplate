@@ -1,21 +1,21 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // extract css
+const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // clean dist folder
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // for html
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.js", // main entry
   output: {
-    path: path.join(__dirname + "/dist"),
-    filename: "js/bundle.js",
+    path: path.join(__dirname + "/dist"), // path to build
+    filename: "js/bundle.js", // output js file
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // all js
+        exclude: /node_modules/, // not node_modules
         use: {
-          loader: "babel-loader",
+          loader: "babel-loader", // babel for react and ES6 to ES5
         },
       },
       {
