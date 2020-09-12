@@ -40,6 +40,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpg|png|webp|ico|svg)$/,
+        use: {
+          loader: "file-loader", // loader for all files
+          options: {
+            name: "[name].[ext]", // keep name
+          },
+        },
+      },
     ],
   },
   optimization: {
@@ -60,6 +69,10 @@ module.exports = {
       chunkFilename: "css/[hash].css", // css hash
     }),
     new CleanWebpackPlugin(), // clean dist
-    new HtmlWebpackPlugin({ template: "./src/index.html" }), // html support
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      //favicon: "./src/favicon.ico", // uncomment for favicon
+      filename: "./index.html",
+    }), // html support
   ],
 };
