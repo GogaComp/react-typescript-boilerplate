@@ -7,6 +7,7 @@ module.exports = {
   entry: "./src/index.js", // main entry
   output: {
     path: path.join(__dirname + "/dist"), // path to build
+    chunkFilename: "js/[hash].bundle.js", // chunk name
     filename: "js/bundle.js", // output js file
   },
   module: {
@@ -30,17 +31,35 @@ module.exports = {
             },
           },
           "postcss-loader", // postcss
-          "sass-loader", // loader for scss to css
+          {
+            // sass
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: "styles",
+          test: /\.scss$/,
+          chunks: "all",
+          enforce: true,
+        },
+      },
+    },
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "css/[id].css",
+      filename: "css/[name].css", // css output file
+      chunkFilename: "css/[hash].css", // css hash
     }),
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new CleanWebpackPlugin(), // clean dist
+    new HtmlWebpackPlugin({ template: "./src/index.html" }), // html support
   ],
 };
