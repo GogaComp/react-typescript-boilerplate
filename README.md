@@ -1,3 +1,23 @@
-# Wepback boilerplate for React
+# Webpack boilerplate for React
 
-Use `npm i` and `npm start` to run app.
+Webpack with babel (jsx), sass (scss), postcss (autoprefixer, css-nano, mqpacker and etc).
+
+## Installation
+
+```javascript
+$ npm i
+```
+
+## Usage
+
+Open development server:
+
+```javascript
+$ npm start
+```
+
+Generate production build:
+
+```javascript
+$ npm run build
+```
