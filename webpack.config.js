@@ -71,7 +71,7 @@ module.exports = {
     new CleanWebpackPlugin(), // clean dist
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/favicon.svg",
+      // favicon: "./src/favicon.svg",
       filename: "./index.html",
     }), // html support
   ],
