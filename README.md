@@ -8,6 +8,12 @@ Webpack with babel (jsx), sass (scss), postcss (autoprefixer, css-nano, mqpacker
 $ npm i
 ```
 
+or
+
+```javascript
+$ yarn
+```
+
 ## Usage
 
 Open development server:
@@ -16,8 +22,20 @@ Open development server:
 $ npm start
 ```
 
+or
+
+```javascript
+$ yarn start
+```
+
 Generate production build:
 
 ```javascript
 $ npm run build
+```
+
+or
+
+```javascript
+$ yarn build
 ```
