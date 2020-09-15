@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/, // all scss
+        test: /\.(scss|sass|css)$/, // all css
         use: [
           "style-loader", // loader for styles
           MiniCssExtractPlugin.loader,
@@ -40,6 +40,7 @@ module.exports = {
           },
         ],
       },
+
       {
         test: /\.(jpg|png|webp|ico|svg)$/,
         use: {
