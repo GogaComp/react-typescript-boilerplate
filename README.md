@@ -1,6 +1,6 @@
-# Webpack boilerplate for React
+# Webpack boilerplate for React with TypeScript
 
-Webpack with babel (jsx), sass (scss), postcss (autoprefixer, css-nano, mqpacker and etc).
+Webpack with babel (jsx), sass (scss), postcss (autoprefixer, css-nano, mqpacker and etc) and TypeScript loader.
 
 ## Installation
 
@@ -16,7 +16,7 @@ $ yarn
 
 ## Usage
 
-Open development server:
+### Open development server:
 
 ```javascript
 $ npm start
@@ -28,7 +28,7 @@ or
 $ yarn start
 ```
 
-Generate production build:
+### Generate production build:
 
 ```javascript
 $ npm run build

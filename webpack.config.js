@@ -4,20 +4,24 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // clean dist fo
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // for html
 
 module.exports = {
-  entry: "./src/index.js", // main entry
+  entry: "./src/index.tsx", // main entry
   output: {
     path: path.join(__dirname + "/dist"), // path to build
     chunkFilename: "js/[hash].bundle.js", // chunk name
     filename: "js/bundle.js", // output js file
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"], // to import in ts files
+  },
   module: {
     rules: [
       {
-        test: /\.js$/, // all js
+        test: /\.(ts|tsx)$/, // all js
         exclude: /node_modules/, // not node_modules
-        use: {
-          loader: "babel-loader", // babel for react and ES6 to ES5
-        },
+        use: [
+          { loader: "babel-loader" }, // babel for react and ES6 to ES5
+          { loader: "ts-loader" }, // typescript
+        ],
       },
       {
         test: /\.(scss|sass|css)$/, // all css
