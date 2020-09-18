@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GogaComp/react-boilerplate.git"
+    "url": "git+https://github.com/GogaComp/react-typescript-boilerplate.git"
   },
   "author": "GogaComp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GogaComp/react-boilerplate/issues"
+    "url": "https://github.com/GogaComp/react-typescript-boilerplate/issues"
   },
-  "homepage": "https://github.com/GogaComp/react-boilerplate#readme",
+  "homepage": "https://github.com/GogaComp/react-typescript-boilerplate#readme",
   "browserslist": [
     "> 1%",
     "last 3 version"
